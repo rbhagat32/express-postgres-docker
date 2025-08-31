@@ -14,7 +14,8 @@
    postgres
    ```
 
-2. Connection ENV Variables (use on host machine) :
+2. Connection ENV Variables (use on host machine):
+   (host is localhost of host machine as we have exposed the Postgres connection to 5433 of host machine)
 
    ```
    PG_USER=admin
@@ -54,6 +55,7 @@
 
 4. Run Express app in a container:
    (can use default port 5432 because it won't conflict inside Express container)
+   (host is now name of the Postgres container)
 
    ```
    docker run -d
