@@ -44,7 +44,7 @@
    docker run -d
    --name pg-container
    --network my-net
-   -e POSTGRES_USER=raghav
+   -e POSTGRES_USER=admin
    -e POSTGRES_PASSWORD=password
    -e POSTGRES_DB=my-db
    -v pg-data:/var/lib/postgresql/data
@@ -57,7 +57,7 @@
    --name express-container
    -p 4000:4000 -e express-image
    --network my-net
-   -e PG_USER=raghav
+   -e PG_USER=admin
    -e PG_PASSWORD=password
    -e PG_HOST=pg-container
    -e PG_DATABASE=my-db
