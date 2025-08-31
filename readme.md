@@ -1,4 +1,4 @@
-## (1)--->>> Connect Postgres in container to Express app on Host Machine :
+## (1)--->>> Connect Postgres in container to Express app on Host Machine:
 
 1. Run Postgres in a container:
    (use port 5433 instead of default port 5432 because it conflicts with the host machine)
@@ -24,7 +24,7 @@
    PG_DATABASE=docker-tut
    ```
 
-## (2)--->>> Connect Postgres in container to Express app in another container :
+## (2)--->>> Connect Postgres in container to Express app in another container:
 
 1. Build express app image using Dockerfile:
 
@@ -39,6 +39,7 @@
    ```
 
 3. Run Postgres in a container:
+   (no need to expose Postgres port as we won't be accessing from host machine)
 
    ```
    docker run -d
@@ -52,6 +53,8 @@
    ```
 
 4. Run Express app in a container:
+   (can use default port 5432 because it won't conflict inside Express container)
+
    ```
    docker run -d
    --name express-container
