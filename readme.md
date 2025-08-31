@@ -15,7 +15,7 @@
    ```
 
 2. Connection ENV Variables (use on host machine):
-   (host is localhost of host machine as we have exposed the Postgres connection to 5433 of host machine)
+   (host is localhost of host machine as we have exposed the Postgres container's 5432 to 5433 of host machine)
 
    ```
    PG_USER=admin
