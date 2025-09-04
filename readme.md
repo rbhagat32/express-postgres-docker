@@ -1,7 +1,7 @@
 ## (1)--->>> Connect Postgres in container to Express app on Host Machine:
 
 1. Run Postgres in a container:
-   (use port 5433 instead of default port 5432 because it conflicts with the host machine)
+   (use port 5433 instead of default port 5432 because it may conflict with the host machine if postgres is installed on host machine)
 
    ```
    docker run -d
